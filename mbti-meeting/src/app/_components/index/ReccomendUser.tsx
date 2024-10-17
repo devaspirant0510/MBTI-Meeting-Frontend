@@ -9,10 +9,6 @@ import UserProfile from "@/app/_components/index/_component/UserProfile";
 import {Member} from "@/app/_lib/data/entity/Member";
 
 const ReccomendUser = () => {
-    const queryClient = new QueryClient();
-    const userData= queryClient.getQueryData<ApiResult<Member[]>>(['v1','member','recommend'])
-    console.log(userData)
-
     const {isLoading, data, error, isError} = useQuery({
         queryKey: ['v1', 'member', 'recommend'],
         queryFn: httpFetcher<ApiResult<Member[]>>

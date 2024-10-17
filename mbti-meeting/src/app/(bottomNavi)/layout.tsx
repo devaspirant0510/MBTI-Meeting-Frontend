@@ -10,7 +10,7 @@ export default function BottomNavLayout({children}: {
 }) {
     return (
         <div className={'flex flex-col h-screen'}>
-            <div className={'flex-1'}>
+            <div className={'flex-1 overflow-auto'}>
                 {children}
             </div>
             <div className={'p-2 flex justify-evenly items-center'}>

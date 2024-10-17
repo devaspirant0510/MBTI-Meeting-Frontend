@@ -1,5 +1,6 @@
 // Mbti Enum
 import {Follow} from "@/app/_lib/data/entity/Follow";
+import {ProfileImage} from "@/app/_lib/data/entity/ProfileImage";
 
 export enum Mbti {
     INFP = 'INFP',
@@ -13,7 +14,7 @@ export interface Member {
     nickName?: string | null;
     mbti?: Mbti | null;
     createdAt?: Date;
-    profileImage?: never//ProfileImage | null;  // ProfileImage 타입과 연결
+    profileImage?: ProfileImage|null//ProfileImage | null;  // ProfileImage 타입과 연결
     followings?: Follow[];  // 팔로우한 사람들
     followers?: Follow[];   // 나를 팔로우하는 사람들
 }
