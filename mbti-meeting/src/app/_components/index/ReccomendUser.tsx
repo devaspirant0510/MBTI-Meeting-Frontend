@@ -1,8 +1,7 @@
 "use client"
 
-import {QueryClient, useQuery} from "@tanstack/react-query";
+import { useQuery} from "@tanstack/react-query";
 import {httpFetcher} from "@/app/_lib/fetcher/httpFetcher";
-import {Account} from "@/app/_lib/data/entity/Account";
 import ApiResult from "@/app/_lib/data/entity/ApiResult";
 import {useEffect} from "react";
 import UserProfile from "@/app/_components/index/_component/UserProfile";
@@ -24,7 +23,7 @@ const ReccomendUser = () => {
     }
     console.log("a", data)
     return (
-        <div className={'w-full'}>
+        <div className={'w-full overflow-x-auto'}>
             <div className={'flex self-start'}>
                 {
                     data?.data?.map(item => {

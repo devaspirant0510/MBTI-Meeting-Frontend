@@ -21,6 +21,22 @@
 }
 
 body {
+}
+
+::-webkit-scrollbar {
+    width: 2px; /* 스크롤바 너비 */
+    height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #999; /* 스크롤바 색상 */
+    border-radius: 4px; /* 스크롤바 모서리 둥글게 */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* 스크롤 트랙 배경 투명 */
+}
+body {
     color: var(--foreground);
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
@@ -41,7 +57,7 @@ body {
     width: 100%;
     max-width: 600px; /* 최대 600px로 고정 */
     min-width: 320px; /* 최소 320px로 고정 (모바일 최소 크기) */
-    background-color: #f5f5f5; /* 시각적 확인을 위한 배경색 */
+    background-color: #fafafa; /* 시각적 확인을 위한 배경색 */
 }
 
 @media (max-width: 600px) {

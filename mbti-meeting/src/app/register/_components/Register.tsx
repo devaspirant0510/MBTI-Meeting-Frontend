@@ -10,7 +10,7 @@ import ProfileSettingPage from "@/app/register/_pages/ProfileSettingPage";
 const Register = () => {
     const {page} = useRegisterStore();
     if (page === 0) {
-        return <PolicyPage></PolicyPage>;
+        return <PolicyPage/>;
     }
     else if(page===1){
         return <MbtiQuestionPage/>;

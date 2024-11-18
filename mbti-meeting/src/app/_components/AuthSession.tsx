@@ -3,7 +3,7 @@ import { SessionProvider } from "next-auth/react";
 import React from "react";
 
 type Props = ({
-    children: any;
+    children: React.ReactNode;
 });
 
 export default function AuthSession({ children }: Props) {

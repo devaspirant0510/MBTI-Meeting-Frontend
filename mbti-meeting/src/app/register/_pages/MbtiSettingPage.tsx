@@ -1,5 +1,4 @@
 "use client"
-import {useState} from "react";
 import MbtiButton from "@/app/register/_components/MbtiButton";
 import {useRegisterStore} from "@/app/_lib/store/registerStore";
 import {Button} from "@nextui-org/react";

@@ -14,7 +14,7 @@ export default function MbtiQuestionPage() {
                 MBTI 검사를 해본적이 있나요?
             </div>
             <div className={"my-4"}>
-                "MBTI Meeting" 은 MBTI 를 기반으로 유저와 소통하는 서비스입니다.
+                &quot;MBTI Meeting&quot; 은 MBTI 를 기반으로 유저와 소통하는 서비스입니다.
             </div>
             <div className={"flex flex-col"}>
                 <Button style={{background: 'var(--primary1)', color: 'white'}}

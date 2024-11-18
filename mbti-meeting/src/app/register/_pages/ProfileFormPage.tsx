@@ -1,16 +1,20 @@
+"use client"
 import {useRegisterStore} from "@/app/_lib/store/registerStore";
 import {Input} from "@nextui-org/input";
 import {Button} from "@nextui-org/react";
-import {useCallback} from "react";
+import {useCallback, useRef} from "react";
 import SexButton from "@/app/register/_components/SexButton";
 
 export default function ProfileFormPage() {
-    const {profilePageStep, setProfilePageStep, mbti1, mbti2, mbti3, mbti4,sex,setSex,setPage} = useRegisterStore();
+    const {profilePageStep, setProfilePageStep, mbti1, mbti2, mbti3, mbti4, sex, setSex, setPage,setName} = useRegisterStore();
+    const inputRef = useRef<HTMLInputElement>(null);
     const onClickNextButton = useCallback(() => {
-        if (profilePageStep==2){
+        if (profilePageStep == 2) {
             setPage(4);
+            setName(inputRef.current.value);
+            console.log(inputRef.current.value);
 
-        }else{
+        } else {
             setProfilePageStep(profilePageStep + 1)
         }
     }, [profilePageStep]);
@@ -18,7 +22,7 @@ export default function ProfileFormPage() {
         <div className={"flex flex-col p-4 justify-between content-between h-screen"}>
             <div>
                 <span className={"text-xl font-bold"}>닉네임</span>
-                <Input startContent={<span>{mbti1}{mbti2}{mbti3}{mbti4}</span>} variant={'faded'}
+                <Input ref={inputRef} startContent={<span>{mbti1}{mbti2}{mbti3}{mbti4}</span>} variant={'faded'}
                        style={{backgroundColor: 'white'}} size={'lg'}/>
                 {profilePageStep > 0 &&
                     <div className={"mt-4"}>

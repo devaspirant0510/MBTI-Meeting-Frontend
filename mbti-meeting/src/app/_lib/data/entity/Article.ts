@@ -5,5 +5,8 @@ export interface Article {
     id:number,
     content:string,
     account:Account,
-    images:ArticleImage[]
+    images:ArticleImage[],
+    likeCount:number,
+    commentCount:number,
+    createdAt:string
 }

@@ -1,7 +1,6 @@
 "use client"
 import {Button, Checkbox, ScrollShadow} from "@nextui-org/react";
 import {useCallback, useState} from "react";
-import {useRouter} from "next/navigation";
 import {useRegisterStore} from "@/app/_lib/store/registerStore";
 
 const PolicyPage = () => {
